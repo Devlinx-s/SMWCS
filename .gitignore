@@ -38,3 +38,4 @@ models/
 htmlcov/
 EOF
 cp ~/.smwcs_temp_gitignore ~/smwcs/.gitignore
+infrastructure/osrm/
