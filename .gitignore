@@ -1,5 +1,6 @@
 cat > ~/.smwcs_temp_gitignore << 'EOF'
 __pycache__/
+.zip
 *.py[cod]
 *.pyo
 venv/
