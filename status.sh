@@ -47,7 +47,8 @@ echo "Background Services:"
 
 check_pid() {
   local name=$1
-  local pid_file="$LOG_DIR/$1.pid"
+  local service_name=$(echo "$1" | xargs)  # trim whitespace
+  local pid_file="$LOG_DIR/$service_name.pid"
   if [ -f "$pid_file" ] && kill -0 "$(cat "$pid_file")" 2>/dev/null; then
     ok "$name  (pid $(cat "$pid_file"))"
   else
