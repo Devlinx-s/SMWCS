@@ -40,6 +40,7 @@ check_http "route-engine    " 8004
 check_http "driver-terminal " 8005
 check_http "command-api     " 8007
 check_http "citizen-api     " 8008
+check_http "media-service   " 8012
 check_http "dashboard       " 5173
 
 echo ""

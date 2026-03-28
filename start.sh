@@ -73,6 +73,7 @@ start_http "route-engine"    "route-engine"    "uvicorn app.main:app --host 0.0.
 start_http "driver-terminal" "driver-terminal" "uvicorn app.main:app --host 0.0.0.0 --port 8005" 8005
 start_http "command-api"     "command-api"     "uvicorn app.main:app --host 0.0.0.0 --port 8007" 8007
 start_http "citizen-api"     "citizen-api"     "uvicorn app.main:app --host 0.0.0.0 --port 8008" 8008
+start_http "media-service"   "media-service"   "uvicorn app.main:app --host 0.0.0.0 --port 8012" 8012
 
 start_bg "iot-ingestion" "iot-ingestion" "python -m app.main"
 start_bg "alert-service" "alert-service" "python -m app.main"

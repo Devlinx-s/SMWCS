@@ -63,8 +63,8 @@ pkill -f "python -m app.main"   2>/dev/null || true
 
 # Stop OSRM container
 if docker ps --format '{{.Names}}' | grep -q smwcs_osrm; then
-  docker stop smwcs_osrm > /dev/null 2>&1
-  docker rm   smwcs_osrm > /dev/null 2>&1
+  docker stop smwcs_osrm > /dev/null 2>&1 || true
+  docker rm -f smwcs_osrm > /dev/null 2>&1 || true
   info "Stopped OSRM"
 fi
 
