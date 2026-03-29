@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "SMWCS Driver",
+    "slug": "smwcs-driver",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0D1F3C"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0D1F3C"
+      },
+      "package": "ke.co.smwcs.driver",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "CAMERA",
+        "VIBRATE",
+        "WAKE_LOCK"
+      ]
+    },
+    "plugins": [
+      ["expo-location", {"locationAlwaysAndWhenInUsePermission": "SMWCS needs location to track your truck position."}],
+      ["expo-camera", {"cameraPermission": "SMWCS needs camera to scan bin RFID codes."}]
+    ]
+  }
+}
